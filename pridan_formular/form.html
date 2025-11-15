@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vstupní formulář – jidelnicek365.cz</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Vstupní formulář</h1>
+    <p class="muted">Vyplň minimum údajů. Tato služba má wellness/edukační charakter a nenahrazuje zdravotní péči.</p>
+
+    <div id="stopBox" class="stop hidden"></div>
+
+    <form id="wizardForm">
+      <section class="step active"><h2>1) Souhlasy</h2>
+        <label class="check"><input type="checkbox" id="c_wellness"> Souhlasím s wellness/edukačním charakterem.</label>
+        <label class="check"><input type="checkbox" id="c_gdpr"> Souhlasím se zpracováním údajů o zdraví.</label>
+        <label class="check"><input type="checkbox" id="c_age"> Je mi 18+ (nebo se souhlasem zákonného zástupce).</label>
+        <label class="check"><input type="checkbox" id="c_delivery"> Souhlasím s okamžitým poskytnutím digitálního obsahu.</label>
+        <div class="nav"><button type="button" class="next">Pokračovat</button></div>
+      </section>
+
+      <!-- … ostatní kroky můžeš doplnit později … -->
+
+      <section class="step"><h2>7) Odeslání</h2>
+        <label class="check"><input type="checkbox" id="recipes" checked> Chci recepty s gramážemi</label>
+        <div class="row"><span>Forma výstupu:</span>
+          <label class="radio"><input type="radio" name="fmt" value="web" checked> Web</label>
+          <label class="radio"><input type="radio" name="fmt" value="pdf"> PDF</label>
+        </div>
+        <div class="nav"><button type="submit" class="primary">Přejít na platbu</button></div>
+      </section>
+    </form>
+
+    <pre id="debug" class="debug hidden"></pre>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
